@@ -1,5 +1,5 @@
 import React from "react";
-import IMAGES from "../../assets/constants/export";
+import IMAGES from "../../constants/export";
 import indexStyle from "../../index.module.css";
 import headerStyle from "./Header.module.css";
 import Button from "../UI/button/Button";
