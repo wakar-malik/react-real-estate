@@ -1,10 +1,11 @@
 import React from "react";
-import IMAGES from "../../assets/constants/export";
+import IMAGES from "../../constants/export";
 import indexStyle from "../../index.module.css";
 import heroStyle from "./Hero.module.css";
 import { HiLocationMarker } from "react-icons/hi";
 import Button from "../../components/UI/button/Button";
 import CountUp from "react-countup";
+
 const Hero = () => {
   return (
     <section className={`${heroStyle["hero-wrapper"]}`}>
@@ -25,8 +26,12 @@ const Hero = () => {
           <div
             className={`${indexStyle.flexColStart} ${heroStyle["hero-des"]}`}
           >
-            <span>Find a variety of properties that suit you very easily</span>
-            <span>Forget all difficulties in finding a residence for you</span>
+            <span className={`${indexStyle.secondaryText}`}>
+              Find a variety of properties that suit you very easily
+            </span>
+            <span className={`${indexStyle.secondaryText}`}>
+              Forget all difficulties in finding a residence for you
+            </span>
           </div>
           <div
             className={`${indexStyle.flexCenter} ${heroStyle["search-bar"]}`}
