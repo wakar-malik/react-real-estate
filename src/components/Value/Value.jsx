@@ -9,36 +9,33 @@ import {
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import valueStyle from "./Value.module.css";
+import "./Value.css";
 import data from "../../utils/accordion";
-import indexStyle from "../../index.module.css";
 import IMAGES from "../../constants/export";
 import "./accordion.css";
 
 const Value = () => {
   return (
-    <section className={valueStyle["v-wrapper"]}>
-      <div
-        className={`${indexStyle.paddings} ${indexStyle.innerWidth} ${indexStyle.flexCenter} ${valueStyle["v-container"]}`}
-      >
+    <section className="v-wrapper">
+      <div className="paddings innerWidth flexCenter v-container">
         {/* left side */}
-        <div className={`${valueStyle["v-left"]}`}>
-          <div className={`${valueStyle["image-container"]}`}>
+        <div className="v-left">
+          <div className="image-container">
             <img src={IMAGES.value} alt="value-image" />
           </div>
         </div>
 
         {/* right side */}
-        <div className={`${indexStyle.flexColStart} ${valueStyle["v-right"]}`}>
-          <span className={indexStyle.orangeText}>Our Value</span>
-          <span className={indexStyle.primaryText}>Value We Give to You</span>
-          <span className={indexStyle.secondaryText}>
+        <div className="flexColStart v-right">
+          <span className="orangeText">Our Value</span>
+          <span className="primaryText">Value We Give to You</span>
+          <span className="secondaryText">
             We always ready to help by providing the best services for you.
             <br />
             We believe a good balance to live can make your life better
           </span>
           <Accordion
-            className={valueStyle.accordion}
+            className="accordion"
             allowMultipleExpanded={false}
             preExpanded={[0]}
           >
@@ -46,14 +43,12 @@ const Value = () => {
               const [className, setClassName] = useState(null);
               return (
                 <AccordionItem
-                  className={`accordionItem ${className}`}
+                  className="accordionItem className"
                   key={i}
                   uuid={i}
                 >
                   <AccordionItemHeading>
-                    <AccordionItemButton
-                      className={`${indexStyle.flexCenter} ${valueStyle.accordionButton}`}
-                    >
+                    <AccordionItemButton className="flexCenter accordionButton">
                       <AccordionItemState>
                         {({ expanded }) =>
                           expanded
@@ -61,27 +56,17 @@ const Value = () => {
                             : setClassName("collapsed")
                         }
                       </AccordionItemState>
-                      <div
-                        className={`${indexStyle.flexCenter} 
-                      ${valueStyle.icon}`}
-                      >
-                        {item.icon}
-                      </div>
-                      <span
-                        className={`${indexStyle.primaryText} ${valueStyle.primaryText}`}
-                      >
+                      <div className="flexCenter icon">{item.icon}</div>
+                      <span className="primaryText primaryText">
                         {item.heading}
                       </span>
-                      <div
-                        className={`${indexStyle.flexCenter} 
-                      ${valueStyle.icon}`}
-                      >
+                      <div className="flexCenter icon">
                         <MdOutlineArrowDropDown />
                       </div>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <p className={indexStyle.secondaryText}>{item.detail}</p>
+                    <p className="secondaryText">{item.detail}</p>
                   </AccordionItemPanel>
                 </AccordionItem>
               );

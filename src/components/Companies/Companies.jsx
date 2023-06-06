@@ -1,14 +1,11 @@
 import React from "react";
-import companyStyle from "./Companies.module.css";
-import indexStyle from "../../index.module.css";
+import "./Companies.css";
 import IMAGES from "../../constants/export";
 
 const Companies = () => {
   return (
-    <section className={companyStyle["c-wrapper"]}>
-      <div
-        className={`${indexStyle.paddings} ${indexStyle.innerWidth} ${indexStyle.flexCenter} ${companyStyle["c-container"]}`}
-      >
+    <section className="c-wrapper">
+      <div className="paddings innerWidth flexCenter c-container">
         <img src={IMAGES.prologis} alt="prologis-image" />
         <img src={IMAGES.tower} alt="tower-image" />
         <img src={IMAGES.equinix} alt="equinix-image" />
