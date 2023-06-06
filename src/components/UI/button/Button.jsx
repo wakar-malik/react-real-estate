@@ -1,8 +1,8 @@
 import React from "react";
-import buttonStyle from "./Button.module.css";
+import "./Button.css";
 
 function Button(props) {
-  const classes = `${buttonStyle.btn} ${props.className || ""}`;
+  const classes = `btn ${props.className || ""}`;
 
   return (
     <button className={classes}>

@@ -1,20 +1,28 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import appStyle from "./App.module.css";
 import Companies from "./components/companies/Companies";
 import Residencies from "./components/Residencies/Residencies";
+import Value from "./components/Value/Value";
+import Contact from "./components/Contact/Contact";
+import GetStarted from "./components/GetStarted/GetStarted";
+import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <div className={`${appStyle.app}`}>
+    <div className="app">
       <div>
-        <div className={`${appStyle["white-gradient"]}`}></div>
+        <div className="white-gradient"></div>
         <Header />
         <Hero />
       </div>
       <Companies />
       <Residencies />
+      <Value />
+      <Contact />
+      <GetStarted />
+      <Footer />
     </div>
   );
 };

@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import IMAGES from "../../constants/export";
-import indexStyle from "../../index.module.css";
-import headerStyle from "./Header.module.css";
-import Button from "../UI/button/Button";
+import { BiMenuAltRight } from "react-icons/bi";
+import OutsideClickHandler from "react-outside-click-handler";
+import "./Header.css";
 
 const Header = () => {
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  const getMenuStyles = (menuOpened) => {
+    if (document.documentElement.clientWidth <= 800) {
+      return { right: !menuOpened && "-100%" };
+    }
+  };
+
   return (
-    <section className={`${headerStyle["h-wrapper"]}`}>
-      <div
-        className={`${indexStyle.flexCenter} ${indexStyle.paddings} ${indexStyle.innerWidth} ${headerStyle["h-container"]}`}
-      >
+    <section className="h-wrapper">
+      <div className="flexCenter paddings innerWidth h-container">
         <img src={IMAGES.logo} alt="logo" width={100} />
 
-        <div className={`${indexStyle.flexCenter} ${headerStyle["h-menu"]}`}>
-          <a href="">Residencies</a>
-          <a href="">Our Value</a>
-          <a href="">Contact Us</a>
-          <a href="">Get Started</a>
-          <Button
-            className={`${headerStyle["header-button"]}`}
-            text="Contact"
-          />
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            setMenuOpened(false);
+          }}
+        >
+          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+            <a href="">Residencies</a>
+            <a href="">Our Value</a>
+            <a href="">Contact Us</a>
+            <a href="">Get Started</a>
+            <button className="button">
+              <a href="">Contact</a>
+            </button>
+          </div>
+        </OutsideClickHandler>
+
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
+          <BiMenuAltRight size={30} />
         </div>
       </div>
     </section>
