@@ -3,6 +3,7 @@ import IMAGES from "../../constants/export";
 import { HiLocationMarker } from "react-icons/hi";
 import Button from "../../components/UI/button/Button";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 import "./Hero.css";
 
 const Hero = () => {
@@ -13,12 +14,16 @@ const Hero = () => {
         <div className="flexColStart hero-left">
           <div className="hero-title">
             <div className="orange-circle"></div>
-            <h1>
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 4, type: "spring" }}
+            >
               Discover
               <br />
               most suitable <br />
               property
-            </h1>
+            </motion.h1>
           </div>
 
           <div className="flexColStart hero-des">
@@ -33,7 +38,7 @@ const Hero = () => {
           <div className="flexCenter search-bar">
             <HiLocationMarker color="var(--blue)" size={25} />
             <input type="text" />
-            <butto className="button">Search</butto>
+            <button className="button">Search</button>
           </div>
 
           <div className="flexCenter stats">
@@ -65,9 +70,14 @@ const Hero = () => {
 
         {/* right side */}
         <div className="flexCenter hero-right">
-          <div className="image-container">
+          <motion.div
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 4, type: "spring" }}
+            className="image-container"
+          >
             <img src={IMAGES.heroImg} alt="hero-image" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import IMAGES from "../../constants/export";
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { HiChatBubbleBottomCenter } from "react-icons/hi2";
-import Button from "../UI/button/Button";
 
 const Contact = () => {
   return (
@@ -21,32 +20,31 @@ const Contact = () => {
           <div className="flexColStart contactModes">
             {/* first row */}
             <div className="flexStart row">
-              <div className="flexColStart .mode">
+              <div className="flexColStart mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
-                    <MdCall size={25} style={{ color: "#4066ff" }} />
+                    <MdCall size={25} color="#4066ff" />
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Call</span>
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
+                <div className="flexCenter button">Call Now</div>
               </div>
 
               {/* second mode */}
               <div className="flexColStart mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
-                    <BsFillChatDotsFill
-                      size={25}
-                      style={{ color: "#4066ff" }}
-                    />
+                    <BsFillChatDotsFill size={25} color="#4066ff" />
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Chat</span>
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
+                <div className="flexCenter button">Call Now</div>
               </div>
             </div>
 
@@ -55,32 +53,28 @@ const Contact = () => {
               <div className="flexColStart mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
-                    <BsFillChatDotsFill
-                      size={25}
-                      style={{ color: "#4066ff" }}
-                    />
+                    <BsFillChatDotsFill size={25} color="#4066ff" />
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Video Call</span>
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
+                <div className="flexCenter button">Call Now</div>
               </div>
 
               {/* fourth mode */}
               <div className="flexColStart mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
-                    <HiChatBubbleBottomCenter
-                      size={25}
-                      style={{ color: "#4066ff" }}
-                    />
+                    <HiChatBubbleBottomCenter size={25} color="#4066ff" />
                   </div>
                   <div className="flexColStart detail">
                     <span className="primaryText">Message</span>
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
+                <div className="flexCenter button">Call Now</div>
               </div>
             </div>
           </div>

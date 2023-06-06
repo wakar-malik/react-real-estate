@@ -55,19 +55,6 @@
   border: 8px solid rgb(232 232 232/93%);
 }
 
-.image-container {
-  width: 30rem;
-  height: 35rem;
-  overflow: hidden;
-  border-radius: 15rem 15rem 0 0;
-  border: 2px solid rgba(255, 255, 255, 0.12);
-}
-
-.image-container > img {
-  width: 100%;
-  height: 100%;
-}
-
 .mode > :nth-child(1) {
   width: 100%;
   gap: 1.6rem;
@@ -78,4 +65,23 @@
   font-weight: bold;
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .c-container {
+    flex-direction: column;
+  }
+  .c-right {
+    justify-content: center;
+  }
+  .contactModes {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mode {
+    width: 100%;
+  }
 }

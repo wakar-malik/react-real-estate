@@ -9,10 +9,9 @@ import {
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import "./Value.css";
 import data from "../../utils/accordion";
 import IMAGES from "../../constants/export";
-import "./accordion.css";
+import "./Value.css";
 
 const Value = () => {
   return (
@@ -43,7 +42,7 @@ const Value = () => {
               const [className, setClassName] = useState(null);
               return (
                 <AccordionItem
-                  className="accordionItem className"
+                  className={`accordionItem ${className}`}
                   key={i}
                   uuid={i}
                 >
@@ -57,11 +56,9 @@ const Value = () => {
                         }
                       </AccordionItemState>
                       <div className="flexCenter icon">{item.icon}</div>
-                      <span className="primaryText primaryText">
-                        {item.heading}
-                      </span>
+                      <span className="primaryText">{item.heading}</span>
                       <div className="flexCenter icon">
-                        <MdOutlineArrowDropDown />
+                        <MdOutlineArrowDropDown size={20} />
                       </div>
                     </AccordionItemButton>
                   </AccordionItemHeading>
